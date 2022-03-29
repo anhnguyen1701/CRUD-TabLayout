@@ -38,6 +38,6 @@ public class SpinnerAdapter extends BaseAdapter {
         View item = LayoutInflater.from(context).inflate(R.layout.item_spinner, viewGroup, false);
         ImageView img = item.findViewById(R.id.img);
         img.setImageResource(imgs[i]);
-        return null;
+        return item;
     }
 }

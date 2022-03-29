@@ -44,7 +44,7 @@ public class FragmentAdd extends Fragment implements CatAdapter.CatItemListener 
         LinearLayoutManager manager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter);
-        adapter.setItemListener(this);
+        adapter.setItemListener(this::onItemClick);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override

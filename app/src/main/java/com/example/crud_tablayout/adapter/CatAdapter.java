@@ -97,10 +97,11 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.CatViewHolder> {
         public CatViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.item_img);
-            name = itemView.findViewById(R.id.editName);
-            price = itemView.findViewById(R.id.editPrice);
-            infor = itemView.findViewById(R.id.editDesc);
+            name = itemView.findViewById(R.id.item_name);
+            price = itemView.findViewById(R.id.item_price);
+            infor = itemView.findViewById(R.id.item_desc);
             btnRemove = itemView.findViewById(R.id.item_btnRemove);
+            itemView.setOnClickListener(this::onClick);
         }
 
         @Override
@@ -121,8 +122,9 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.CatViewHolder> {
         mainActivity.list = mList;
     }
 
-    public void update(int postion, Cat cat) {
-        mList.set(postion, cat);
+    public void update(int position, Cat cat) {
+        mList.set(position, cat);
+        notifyDataSetChanged();
         mainActivity.list = mList;
     }
 }

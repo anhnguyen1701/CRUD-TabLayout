@@ -4,12 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:src="@drawable/meo1"></ImageView>
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"

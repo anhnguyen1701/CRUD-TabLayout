@@ -38,7 +38,7 @@ public class FragmentSearch extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         search = view.findViewById(R.id.search);
-        recyclerView = view.findViewById(R.id.search);
+        recyclerView = view.findViewById(R.id.reViewSearch);
         adapter = new SearchAdapter();
         LinearLayoutManager manager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(manager);

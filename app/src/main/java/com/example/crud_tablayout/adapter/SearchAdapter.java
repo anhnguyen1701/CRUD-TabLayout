@@ -61,9 +61,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         public SearchViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.item_img);
-            name = itemView.findViewById(R.id.editName);
-            price = itemView.findViewById(R.id.editPrice);
-            infor = itemView.findViewById(R.id.editDesc);
+            name = itemView.findViewById(R.id.item_name);
+            price = itemView.findViewById(R.id.item_price);
+            infor = itemView.findViewById(R.id.item_desc);
         }
     }
 }
