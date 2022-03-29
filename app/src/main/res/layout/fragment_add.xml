@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/meo1"></ImageView>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:text="Name: "
+                android:textColor="@color/grayblue"
+                android:textSize="11dp"></TextView>
+
+            <EditText
+                android:id="@+id/editName"
+                android:hint="Nhap ten"
+                android:textColor="@color/grayblue"
+                android:textSize="11dp"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Price: "
+                android:textColor="@color/grayblue"
+                android:textSize="11dp"></TextView>
+
+            <EditText
+                android:id="@+id/editPrice"
+                android:hint="Nhap gia"
+                android:textColor="@color/grayblue"
+                android:textSize="11dp"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Mieu ta: "
+                android:textColor="@color/grayblue"
+                android:textSize="11dp"></TextView>
+
+            <EditText
+                android:id="@+id/editDesc"
+                android:hint="Nhap mieu ta"
+                android:textColor="@color/grayblue"
+                android:textSize="11dp"></EditText>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Add"></Button>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Update"></Button>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
