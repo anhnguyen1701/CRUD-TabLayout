@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.crud_tablayout.MainActivity;
 import com.example.crud_tablayout.R;
 import com.example.crud_tablayout.model.Cat;
 
@@ -21,9 +22,11 @@ import java.util.List;
 public class CatAdapter extends RecyclerView.Adapter<CatAdapter.CatViewHolder> {
     private List<Cat> mList;
     private CatItemListener itemListener;
+    private MainActivity mainActivity;
 
-    public CatAdapter() {
+    public CatAdapter(MainActivity mainActivity) {
         mList = new ArrayList<>();
+        this.mainActivity = mainActivity;
     }
 
     public void setItemListener(CatItemListener itemListener) {
