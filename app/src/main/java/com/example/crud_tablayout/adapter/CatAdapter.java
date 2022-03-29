@@ -67,6 +67,7 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.CatViewHolder> {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         mList.remove(holder.getAdapterPosition());
                         notifyDataSetChanged();
+                        mainActivity.list = mList;
                     }
                 });
 
@@ -117,9 +118,11 @@ public class CatAdapter extends RecyclerView.Adapter<CatAdapter.CatViewHolder> {
     public void add(Cat cat) {
         mList.add(cat);
         notifyDataSetChanged();
+        mainActivity.list = mList;
     }
 
     public void update(int postion, Cat cat) {
         mList.set(postion, cat);
+        mainActivity.list = mList;
     }
 }
